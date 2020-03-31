@@ -23,18 +23,20 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new SystemActiveConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionStatusConfiguration());
             // add your own configuration here
         }
-        public DbSet<Product> GetProduts { get; set; }
-        public DbSet<Category> Categories { get; set; }
+
         public DbSet<Cart> Appconfigs { get; set; }
         public DbSet<Cart> Carts { get; set; }
-        public DbSet<ProductTranslation> ProductTranslations { get; set; }
         public DbSet<CategoriesTranslation> CategoriesTranslations { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductTranslation> ProductTranslations { get; set; }
         public DbSet<SystemActivity> SystemActivities { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Languages> Languages { get; set; }
@@ -42,8 +44,10 @@ namespace eShopSolution.Data.EF
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ProductInCategories> ProductInCategories { get; set; }
+
         public DbSet<Promotion> Promotions { get; set; }
 
-        public DbSet<TransactionStatus> transactionStatuses { get; set; }
+        public DbSet<TransactionStatus> TransactionStatus { get; set; }
     }
 }

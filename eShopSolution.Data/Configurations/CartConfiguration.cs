@@ -11,9 +11,13 @@ namespace eShopSolution.Data.Configurations
     {
         void IEntityTypeConfiguration<Cart>.Configure(EntityTypeBuilder<Cart> builder)
         {
-            builder.ToTable("Appconfigs");
+            builder.ToTable("Carts");
             builder.HasKey(x => x.ID);
-            throw new NotImplementedException();
+            builder.Property(x => x.ID).IsRequired();
+
+            builder.Property(x => x.UpdateDate).HasColumnType("Date");
+            builder.Property(x => x.UpdateDate).HasDefaultValueSql("GETDATE()");
+
         }
     }
 }

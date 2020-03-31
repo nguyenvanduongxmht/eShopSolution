@@ -21,7 +21,6 @@ namespace eShopSolution.Data.Configurations
 
 
 
-            throw new NotImplementedException();
         }
     }
 }

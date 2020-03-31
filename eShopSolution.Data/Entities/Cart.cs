@@ -11,6 +11,7 @@ namespace eShopSolution.Data.Entities
         public int ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public DateTime UpdateDate { get; set; }
         public Status Status { get; set; }
     }
 }

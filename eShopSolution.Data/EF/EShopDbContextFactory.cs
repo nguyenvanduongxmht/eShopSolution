@@ -20,13 +20,12 @@ namespace eShopSolution.Data.EF
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
 
-            var conectionString = configuration.GetConnectionString("EShopSolutionDb");
+            var conectionString = configuration.GetConnectionString("EShopSolutionDbLocal");
 
             var optionsBuilder = new DbContextOptionsBuilder<EShopDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=blog.db");
+            optionsBuilder.UseSqlServer("conectionString");
 
             return new EShopDbContext(optionsBuilder.Options);
-            throw new NotImplementedException();
         }
     }
 }

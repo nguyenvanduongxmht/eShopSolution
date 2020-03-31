@@ -13,7 +13,6 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("Contacts");
             builder.HasKey(x => x.Id);
-            throw new NotImplementedException();
         }
     }
 }
