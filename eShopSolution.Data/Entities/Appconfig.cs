@@ -6,7 +6,7 @@ namespace eShopSolution.Data.Entities
 {
     public class Appconfig
     {
-        public  string Key { get; set; }
+        public  int Key { get; set; }
         public string Value { get; set; }
     }
 }

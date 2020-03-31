@@ -14,7 +14,6 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("Languages");
             builder.HasKey(x => x.Id);
-            throw new NotImplementedException();
         }
     }
 }

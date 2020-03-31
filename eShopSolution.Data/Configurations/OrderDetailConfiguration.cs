@@ -16,7 +16,6 @@ namespace eShopSolution.Data.Configurations
             builder.HasOne(c => c.Order).WithMany(e => e.OrderDetails).HasForeignKey(x => x.OrderId);
             builder.HasOne(c => c.Product).WithMany(e => e.OrderDetails).HasForeignKey(x => x.ProductId);
 
-            throw new NotImplementedException();
         }
     }
 }

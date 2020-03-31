@@ -13,7 +13,7 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("Appconfigs");
             builder.HasKey(x => x.Key);
-            throw new NotImplementedException();
+            builder.Property(t => t.Key).IsRequired();
         }
     }
 }

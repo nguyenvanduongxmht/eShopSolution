@@ -15,7 +15,6 @@ namespace eShopSolution.Data.Configurations
             builder.ToTable("Promotions");
             builder.HasKey(x => x.Id);
 
-            throw new NotImplementedException();
         }
     }
 }

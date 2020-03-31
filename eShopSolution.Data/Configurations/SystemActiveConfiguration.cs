@@ -11,9 +11,8 @@ namespace eShopSolution.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<SystemActivity> builder)
         {
-            builder.ToTable("SystemActivity");
+            builder.ToTable("SystemActivities");
             builder.HasKey(x => x.Id);
-            throw new NotImplementedException();
         }
     }
 }
