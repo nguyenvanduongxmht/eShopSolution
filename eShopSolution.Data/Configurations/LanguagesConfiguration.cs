@@ -12,7 +12,7 @@ namespace eShopSolution.Data.Configurations
 
         public void Configure(EntityTypeBuilder<Languages> builder)
         {
-            builder.ToTable("Languages");
+            builder.ToTable("Languages", "apps"); ;
             builder.HasKey(x => x.Id);
         }
     }

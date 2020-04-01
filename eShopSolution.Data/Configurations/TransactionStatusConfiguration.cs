@@ -11,7 +11,7 @@ namespace eShopSolution.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<TransactionStatus> builder)
         {
-            builder.ToTable("TransactionStatus");
+            builder.ToTable("TransactionStatus", "apps"); ;
             builder.HasKey(x => x.Id);
         }
     }

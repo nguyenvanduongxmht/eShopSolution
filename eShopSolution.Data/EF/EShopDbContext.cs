@@ -31,7 +31,7 @@ namespace eShopSolution.Data.EF
             // add your own configuration here
         }
 
-        public DbSet<Cart> Appconfigs { get; set; }
+        public DbSet<Appconfig> Appconfigs { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CategoriesTranslation> CategoriesTranslations { get; set; }
         public DbSet<Category> Categories { get; set; }

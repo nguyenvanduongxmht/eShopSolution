@@ -12,7 +12,7 @@ namespace eShopSolution.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
-            builder.ToTable("Orders");
+            builder.ToTable("Orders", "apps"); ;
             builder.HasKey(x => x.Id);
             builder.HasMany(e => e.OrderDetails).WithOne(c => c.Order);
         }

@@ -11,7 +11,7 @@ namespace eShopSolution.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Contact> builder)
         {
-            builder.ToTable("Contacts");
+            builder.ToTable("Contacts", "apps"); ;
             builder.HasKey(x => x.Id);
         }
     }

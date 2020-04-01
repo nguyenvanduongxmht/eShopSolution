@@ -10,8 +10,8 @@ using eShopSolution.Data.EF;
 namespace eShopSolution.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    [Migration("20200331042606_Initial")]
-    partial class Initial
+    [Migration("20200401110413_B")]
+    partial class B
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Key");
 
-                    b.ToTable("Appconfigs");
+                    b.ToTable("Appconfigs","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Cart", b =>
@@ -62,7 +62,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Carts");
+                    b.ToTable("Carts","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.CategoriesTranslation", b =>
@@ -92,7 +92,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CategoriesTranslations");
+                    b.ToTable("CategoriesTranslations","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Category", b =>
@@ -116,7 +116,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Contact", b =>
@@ -143,7 +143,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Languages", b =>
@@ -161,7 +161,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Order", b =>
@@ -194,7 +194,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.OrderDetail", b =>
@@ -215,7 +215,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.Product", b =>
@@ -245,7 +245,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.ProductInCategories", b =>
@@ -260,7 +260,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductInCategories");
+                    b.ToTable("ProductInCategories","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.ProductTranslation", b =>
@@ -332,7 +332,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Promotions");
+                    b.ToTable("Promotions","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.SystemActivity", b =>
@@ -359,7 +359,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SystemActivities");
+                    b.ToTable("SystemActivities","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.TransactionStatus", b =>
@@ -374,7 +374,7 @@ namespace eShopSolution.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TransactionStatus");
+                    b.ToTable("TransactionStatus","apps");
                 });
 
             modelBuilder.Entity("eShopSolution.Data.Entities.OrderDetail", b =>

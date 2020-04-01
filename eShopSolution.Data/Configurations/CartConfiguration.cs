@@ -11,7 +11,7 @@ namespace eShopSolution.Data.Configurations
     {
         void IEntityTypeConfiguration<Cart>.Configure(EntityTypeBuilder<Cart> builder)
         {
-            builder.ToTable("Carts");
+            builder.ToTable("Carts", "apps"); ;
             builder.HasKey(x => x.ID);
             builder.Property(x => x.ID).IsRequired();
 

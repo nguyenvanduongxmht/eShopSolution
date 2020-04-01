@@ -12,7 +12,7 @@ namespace eShopSolution.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Promotion> builder)
         {
-            builder.ToTable("Promotions");
+            builder.ToTable("Promotions", "apps"); ;
             builder.HasKey(x => x.Id);
 
         }

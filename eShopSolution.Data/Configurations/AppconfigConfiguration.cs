@@ -11,7 +11,7 @@ namespace eShopSolution.Data.Configurations
     {
         void IEntityTypeConfiguration<Appconfig>.Configure(EntityTypeBuilder<Appconfig> builder)
         {
-            builder.ToTable("Appconfigs");
+            builder.ToTable("Appconfigs", "apps"); ;
             builder.HasKey(x => x.Key);
             builder.Property(t => t.Key).IsRequired();
         }
