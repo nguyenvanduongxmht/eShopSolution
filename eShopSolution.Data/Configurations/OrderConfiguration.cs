@@ -14,7 +14,7 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("Orders");
             builder.HasKey(x => x.Id);
-            builder.HasMany(e => e.OrderDetails).WithOne(c => c.Order);
+           
         }
     }
 }

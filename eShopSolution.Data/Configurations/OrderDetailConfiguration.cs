@@ -13,9 +13,15 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("OrderDetails");
             builder.HasKey(x => new { x.OrderId, x.ProductId });
-            builder.HasOne(c => c.Order).WithMany(e => e.OrderDetails).HasForeignKey(x => x.OrderId);
+            
             builder.HasOne(c => c.Product).WithMany(e => e.OrderDetails).HasForeignKey(x => x.ProductId);
-
-        }
+            builder
+                       .HasOne<Order>(s => s.Order)
+                       .WithMany(g => g.OrderDetails)
+                       .HasForeignKey(s => s.OrderId);
+            builder.HasOne<Product>(p => p.Product)
+                        .WithMany(x => x.OrderDetails)
+                        .HasForeignKey(x => x.ProductId);
+            }
     }
 }

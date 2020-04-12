@@ -12,5 +12,6 @@ namespace eShopSolution.Data.Entities
         public float Price { get; set; }
         public Order Order { get; set; }
         public Product Product { get; set; }
+
     }
 }

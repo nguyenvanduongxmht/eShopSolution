@@ -28,6 +28,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new SystemActiveConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCartConfiguration());
             // add your own configuration here
         }
 
@@ -49,5 +50,6 @@ namespace eShopSolution.Data.EF
         public DbSet<Promotion> Promotions { get; set; }
 
         public DbSet<TransactionStatus> TransactionStatus { get; set; }
+        public DbSet<ProductInCart> ProductInCarts { get; set; }
     }
 }

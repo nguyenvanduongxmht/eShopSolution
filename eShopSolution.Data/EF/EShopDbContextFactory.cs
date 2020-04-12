@@ -23,8 +23,7 @@ namespace eShopSolution.Data.EF
             var conectionString = configuration.GetConnectionString("EShopSolutionDbLocal");
 
             var optionsBuilder = new DbContextOptionsBuilder<EShopDbContext>();
-            optionsBuilder.UseSqlServer("conectionString");
-
+            optionsBuilder.UseSqlServer(conectionString);
             return new EShopDbContext(optionsBuilder.Options);
         }
     }

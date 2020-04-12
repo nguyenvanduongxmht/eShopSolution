@@ -13,6 +13,10 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("CategoriesTranslations");
             builder.HasKey(x => x.Id);
+            builder
+            .HasOne<Category>(s => s.Category)
+            .WithMany(g => g.CategoriesTranslations)
+            .HasForeignKey(s => s.CategoryId);
         }
     }
 }
