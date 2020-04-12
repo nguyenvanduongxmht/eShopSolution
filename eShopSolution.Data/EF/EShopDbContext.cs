@@ -1,5 +1,7 @@
 ﻿using eShopSolution.Data.Configurations;
 using eShopSolution.Data.Entities;
+using eShopSolution.Data.Extensions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Text;
 
 namespace eShopSolution.Data.EF
 {
-    public class EShopDbContext : DbContext
+    public class EShopDbContext : IdentityDbContext
     {
         public EShopDbContext(DbContextOptions options) : base(options)
         {
@@ -29,6 +31,10 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new SystemActiveConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionStatusConfiguration());
             modelBuilder.ApplyConfiguration(new ProductInCartConfiguration());
+            modelBuilder.Seed();
+
+
+
             // add your own configuration here
         }
 

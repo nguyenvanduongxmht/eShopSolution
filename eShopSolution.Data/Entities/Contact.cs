@@ -11,7 +11,7 @@ namespace eShopSolution.Data.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Message { get; set; }
-        public string Status { get; set; }
+        public Enum.Status Status { get; set; }
 
     }
 }
